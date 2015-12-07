@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<h:outputStylesheet library="css" name="main.css" />
+</h:head>
+<h:body>
+	<h:form>
+		<h:messages/>
+		
+		<h3>#{msgs.artistaUpdateHeader}: #{artistaMB.artista.nomeArtista}</h3>
+		<h:inputHidden value="#{artistaMB.artista.idArtista}" />
+		<h:panelGrid columns="2" styleClass="panelGrid" rowClasses="panelFirstLine,panelNextLine" >
+			<h:outputLabel for="artistaName" value="#{msgs.artistaName}" />
+			<h:inputText id="artistaName" value="#{artistaMB.artista.nomeArtista}" required="true" requiredMessage="#{msgs.artistaNameRequired}" />
+			
+			<h:outputLabel for="artistaTelefone" value="#{msgs.artistaTelefone}" />
+			<h:inputText id="artistaTelefone" value="#{artistaMB.artista.telefone}" required="true" requiredMessage="#{msgs.artistaTelefoneRequired}" >
+				<f:convertNumber />
+			</h:inputText>
+		</h:panelGrid>
+		<h:panelGrid columns="2">
+			<h:commandButton action="#{artistaMB.updateArtistaEnd()}" value="#{msgs.atualizar}" />
+			<h:commandButton action="#{artistaMB.listAllArtistas()}" value="#{msgs.cancelar}" immediate="true" />
+		</h:panelGrid>
+		<br/>
+	</h:form>
+</h:body>
+</html>
