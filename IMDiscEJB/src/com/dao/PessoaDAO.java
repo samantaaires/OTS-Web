@@ -11,8 +11,8 @@ public class PessoaDAO extends GenericDAO<Pessoa> {
 		super(Pessoa.class);
 	    }
 	    
-	    public void delete(Pessoa pessoa) {
+/*	    public void delete(Pessoa pessoa) {
 	        super.delete(pessoa.getIdPessoa(), Pessoa.class);
-	    }
+	    }*/
 
 }

@@ -33,7 +33,7 @@ public class Pessoa implements Serializable {
 	@JoinColumn(name = "id_user")
 	private User user;
 	
-	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+/*	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	@JoinColumn(name = "id_escolha")	
 	private Escolha escolha;
 	
@@ -43,7 +43,7 @@ public class Pessoa implements Serializable {
 	
 	public int getIdPessoa() {
 		return idPessoa;
-	}
+	}*/
 
 	public void setIdPessoa(int idPessoa) {
 		this.idPessoa = idPessoa;
@@ -65,7 +65,7 @@ public class Pessoa implements Serializable {
 		this.matricula = matricula;
 	}
 
-	public Escolha getEscolha() {
+	/*public Escolha getEscolha() {
 		return escolha;
 	}
 
@@ -79,7 +79,7 @@ public class Pessoa implements Serializable {
 
 	public void setEstruturaCurricular(EstruturaCurricular estruturaCurricular) {
 		this.estruturaCurricular = estruturaCurricular;
-	}
+	}*/
 
 	
 	public User getUser() {
