@@ -27,6 +27,8 @@ public class EstabelecimentoMB implements Serializable {
 	
 	private Artista artista;
 	
+	private Contratacao contratacao;
+	
 	@EJB
 	private EstabelecimentoFacade estabelecimentoFacade;
 	private ArtistaFacade artistaFacade;
@@ -68,11 +70,25 @@ public Artista getArtista() {
 		this.artista = artista;
 	}
 	
+	public Contratacao getContratacao() {
+		
+		if(contratacao == null){
+			contratacao = new Contratacao();
+			contratacao.setArtista(artista);
+			contratacao.setEstabelecimento(estabelecimento);
+		}
+		
+		return contratacao;
+	}
+	
+	public void setContratacao(Contratacao contratacao) {
+		this.contratacao = contratacao;
+	}
+	
 	public List<Estabelecimento> getAllEstabelecimentos() {
 		return estabelecimentoFacade.findAll();
 	}
 	
-
 	
 	public String updateEstabelecimentoStart(){
 		return UPDATE_ESTABELECIMENTO;
@@ -163,11 +179,7 @@ public Artista getArtista() {
 	}
 	
 	public String contratarArtistaEnd() {
-		Contratacao contratacao = new Contratacao();
-		if (estabelecimentoFacade.find(estabelecimento.getIdEstabelecimento())!= null &&
-			artistaFacade.find(artista.getIdArtista()) != null) {
-		contratacao.setArtista(artista);
-		contratacao.setEstabelecimento(estabelecimento);}
+		System.out.println(contratacao.getEstabelecimento());
 		try {
 			contratacaoFacade.save(contratacao);
 		} catch (EJBException e) {

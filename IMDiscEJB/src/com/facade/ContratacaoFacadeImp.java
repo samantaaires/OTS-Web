@@ -60,10 +60,11 @@ public class ContratacaoFacadeImp implements ContratacaoFacade{
 		if(contratacao.getEstabelecimento() == null){
 			hasError = true;
 		}
-/*		
+		
 		if(contratacao.isAceito() == true){
 			hasError = true;
-		}*/
+		}
+		
 		
 //		if(contratacao.getUser() == null){
 //			hasError = true;

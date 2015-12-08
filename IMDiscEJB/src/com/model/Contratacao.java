@@ -28,9 +28,9 @@ public class Contratacao implements Serializable {
     @JoinColumn(name="idEstabelecimento")
     private Estabelecimento estabelecimento;
 	
-/*	*@Column
-	private boolean aceito;
-*/
+	@Column
+	private boolean aceito = false;
+	
 	public int getIdContratacao() {
 		return idContratacao;
 	}
@@ -55,11 +55,11 @@ public class Contratacao implements Serializable {
 		this.estabelecimento = estabelecimento;
 	}
 
-/*	public boolean isAceito() {
+	public boolean isAceito() {
 		return aceito;
 	}
 
 	public void setAceito(boolean aceito) {
 		this.aceito = aceito;
-	}*/
+	}
 }

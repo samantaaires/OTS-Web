@@ -38,13 +38,11 @@
 					
 					<h:commandButton action="#{estabelecimentoMB.contratarArtistaStart()}" value="#{msgs.contratarArtista}" rendered="#{userMB.userAdmin}" >
 						<f:setPropertyActionListener target="#{estabelecimentoMB.artista}" value="#{artista}" />
+						<f:setPropertyActionListener target="#{estabelecimentoMB.estabelecimento}" value="#{estabelecimento}" />
 					</h:commandButton>
 				</h:panelGrid>
 			</h:column>
 		</h:dataTable>
-		<!-- This button is displayed to the user, just to you see the error msg  -->
-		<h:commandButton action="createArtista" value="#{msgs.criar} #{msgs.artista}" />
-		<!-- <h:commandButton action="createDisciplina" value="Criar Disciplina" /> -->
 	</h:form>
 </h:body>
 </html>

@@ -12,7 +12,7 @@
 		<h:messages/>
 		
 		<h3>#{msgs.estabelecimento}: #{estabelecimentoMB.estabelecimento.nomeEstabelecimento} || <h:commandLink action="#{userMB.logOut()}" value="#{msgs.logout}" /> </h3>
-		<h3>#{msgs.artista}: #{artistaMB.artista.nomeArtista}</h3>
+		<h3>#{msgs.artista}: #{estabelecimentoMB.artista.nomeArtista}</h3>
 		
 		<h:inputHidden value="#{estabelecimentoMB.artista.idArtista}" />
 		<h:inputHidden value="#{estabelecimentoMB.estabelecimento.idEstabelecimento}" />
