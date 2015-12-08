@@ -16,37 +16,37 @@
 		<h3>#{msgs.loginHello}: #{userMB.user.name} || <h:commandLink action="#{userMB.logOut()}" value="#{msgs.logout}" /> </h3>
 	
 		<h:messages />
-		<h:dataTable value="#{artistaMB.allArtistas}" var="artista" styleClass="table" headerClass="tableColumnsHeader" rowClasses="tableFirstLine,tableNextLine" id="artistas-table" >
+		<h:dataTable value="#{estabelecimentoMB.allEstabelecimentos}" var="estabelecimento" styleClass="table" headerClass="tableColumnsHeader" rowClasses="tableFirstLine,tableNextLine" id="estabelecimentos-table" >
 			<h:column>
 				<f:facet name="header">
-					#{msgs.artistaName}
+					#{msgs.estabelecimentoName}
 				</f:facet>
 				
-				#{artista.nomeArtista}
+				#{estabelecimento.nomeEstabelecimento}
 			</h:column>
 			<h:column>
 				<f:facet name="header">
-					#{msgs.artistaTelefone}
+					#{msgs.estabelecimentoTelefone}
 				</f:facet>
 				
-				#{artista.telefone}
+				#{estabelecimento.telefone}
 			</h:column>
 			<h:column>
 				<h:panelGrid columns="2">
 					<!-- Always save the id as hidden when you use a request scope MB -->
-					<h:inputHidden value="#{artista.idArtista}" />
+					<h:inputHidden value="#{estabelecimento.idEstabelecimento}" />
 					
-					<h:commandButton action="#{artistaMB.updateArtistaStart()}" value="#{msgs.atualizar}" rendered="#{userMB.userAdmin}" >
-						<f:setPropertyActionListener target="#{artistaMB.artista}" value="#{artista}" />
+					<h:commandButton action="#{estabelecimentoMB.updateEstabelecimentoStart()}" value="#{msgs.atualizar}" rendered="#{userMB.userAdmin}" >
+						<f:setPropertyActionListener target="#{estabelecimentoMB.estabelecimento}" value="#{estabelecimento}" />
 					</h:commandButton>
-					<h:commandButton action="#{artistaMB.deleteArtistaStart()}" value="#{msgs.deletar}" rendered="#{userMB.userAdmin}" >
-						<f:setPropertyActionListener target="#{artistaMB.artista}" value="#{artista}" />
+					<h:commandButton action="#{estabelecimentoMB.deleteEstabelecimentoStart()}" value="#{msgs.deletar}" rendered="#{userMB.userAdmin}" >
+						<f:setPropertyActionListener target="#{estabelecimentoMB.estabelecimento}" value="#{estabelecimento}" />
 					</h:commandButton>
 				</h:panelGrid>
 			</h:column>
 		</h:dataTable>
 		<!-- This button is displayed to the user, just to you see the error msg  -->
-		<h:commandButton action="createArtista" value="#{msgs.criar} #{msgs.artista}" />
+		<h:commandButton action="createEstabelecimento" value="#{msgs.criar} #{msgs.estabelecimento}" />
 		<!-- <h:commandButton action="createDisciplina" value="Criar Disciplina" /> -->
 	</h:form>
 </h:body>

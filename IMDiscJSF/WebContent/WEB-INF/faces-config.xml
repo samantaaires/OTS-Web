@@ -66,6 +66,53 @@
 		<from-outcome>deleteArtista</from-outcome>
 		<to-view-id>/pages/protected/admin/deleteArtista.xhtml</to-view-id>
 	</navigation-case> 
+	<navigation-case>
+		<from-outcome>findArtista</from-outcome>
+		<to-view-id>/pages/protected/admin/findArtista.xhtml</to-view-id>
+	</navigation-case> 
+	<navigation-case>
+		<from-outcome>listFoundArtista</from-outcome>
+		<to-view-id>/pages/protected/admin/listFoundArtistas.xhtml</to-view-id>
+	</navigation-case> 	
+	</navigation-rule>
+	
+		<navigation-rule>
+		<navigation-case>
+			<from-outcome>listAllEstabelecimento</from-outcome>
+			<to-view-id>/pages/protected/user/listAllEstabelecimento.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>createEstabelecimento</from-outcome>
+			<to-view-id>/pages/protected/admin/createEstabelecimento.xhtml</to-view-id>
+			<redirect/>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>updateEstabelecimento</from-outcome>
+			<to-view-id>/pages/protected/admin/updateEstabelecimento.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+	<navigation-case>
+		<from-outcome>deleteEstabelecimento</from-outcome>
+		<to-view-id>/pages/protected/admin/deleteEstabelecimento.xhtml</to-view-id>
+	</navigation-case> 
+	<navigation-case>
+		<from-outcome>findEstabelecimento</from-outcome>
+		<to-view-id>/pages/protected/admin/findEstabelecimento.xhtml</to-view-id>
+	</navigation-case> 
+	<navigation-case>
+		<from-outcome>contratarArtista</from-outcome>
+		<to-view-id>/pages/protected/admin/contratarArtista.xhtml</to-view-id>
+	</navigation-case> 	
+	<navigation-case>
+		<from-outcome>estabelecimento_listAllArtistas</from-outcome>
+		<to-view-id>/pages/protected/user/estabelecimento_listAllArtistas.xhtml</to-view-id>
+	</navigation-case> 
+	
 	</navigation-rule>
 	
 	

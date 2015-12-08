@@ -16,6 +16,8 @@ public interface ArtistaFacade {
 
 	public abstract Artista find(int entityID);
 
-	public abstract List<Artista> findAll();
+	//public abstract Artista findByName(String entityName);
+
+	public abstract List<Artista> findAll(); 
 	
 }

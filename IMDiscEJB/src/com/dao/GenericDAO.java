@@ -38,6 +38,10 @@ public abstract class GenericDAO<T> {
 	public T find(int entityID) {
 		return em.find(entityClass, entityID);
 	}
+	
+/*	public T findByName(String entityName) {
+		return em.find(entityClass, entityName);
+	}*/
 
 	// Using the unchecked because JPA does not have a
 	// em.getCriteriaBuilder().createQuery()<T> method

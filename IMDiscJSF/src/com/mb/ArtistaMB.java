@@ -12,7 +12,9 @@ import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 
 import com.facade.ArtistaFacade;
+import com.facade.ContratacaoFacade;
 import com.model.Artista;
+import com.model.Contratacao;
 
 @ManagedBean(name = "artistaMB")
 @SessionScoped
@@ -20,14 +22,18 @@ public class ArtistaMB implements Serializable {
 	private static final long serialVersionUID = -329216827348989761L;
 
 	private Artista artista;
+	private Contratacao contratacao;
 	
 	@EJB
 	private ArtistaFacade artistaFacade;
+	private ContratacaoFacade contratacaoFacade;
 	
 	private static final String CREATE_ARTISTA = "createArtista";
 	private static final String DELETE_ARTISTA = "deleteArtista"; 
 	private static final String UPDATE_ARTISTA = "updateArtista";
 	private static final String LIST_ALL_ARTISTAS = "listAllArtistas";
+	private static final String FIND_ARTISTA = "findArtista";
+	private static final String LIST_FOUND_ARTISTAS = "listFoundArtistas";
 	private static final String STAY_IN_THE_SAME_PAGE = null;
 
 	public Artista getArtista() {
@@ -46,6 +52,15 @@ public class ArtistaMB implements Serializable {
 	public List<Artista> getAllArtistas() {
 		return artistaFacade.findAll();
 	}
+	
+	public void setContratacao(Contratacao contratacao) {
+		this.contratacao = contratacao;
+	}
+	
+	public List<Contratacao> getAllContratacoes() {
+		return contratacaoFacade.findAll();
+	}
+
 	
 	public String updateArtistaStart(){
 		return UPDATE_ARTISTA;
@@ -99,9 +114,36 @@ public class ArtistaMB implements Serializable {
 	}
 	
 	public String listAllArtistas(){
+		try {
+			artistaFacade.save(artista);
+		} catch (EJBException e) {
+			sendErrorMessageToUser("Error. Check if the telefone is above 0 or call the adm");
+			
+			return STAY_IN_THE_SAME_PAGE;
+		}		
+		
+		sendInfoMessageToUser("Operation Complete: Create");
+		
 		return LIST_ALL_ARTISTAS;
 	}
 	
+	public String findArtistaStart() {
+		return FIND_ARTISTA;
+	}
+	
+	public String findArtistaEnd(){
+		try {
+			artistaFacade.find(artista.getIdArtista());
+		} catch (EJBException e) {
+			sendErrorMessageToUser("Error. Check if the telefone is above 0 or call the adm");
+			
+			return STAY_IN_THE_SAME_PAGE;
+		}		
+		
+		sendInfoMessageToUser("Operation Complete: Create");
+		
+		return LIST_FOUND_ARTISTAS;
+	}
 	private void sendInfoMessageToUser(String message){
 		FacesContext context = getContext();
 		context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, message, message));

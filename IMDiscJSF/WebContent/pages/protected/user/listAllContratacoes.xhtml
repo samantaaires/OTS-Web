@@ -16,25 +16,25 @@
 		<h3>#{msgs.loginHello}: #{userMB.user.name} || <h:commandLink action="#{userMB.logOut()}" value="#{msgs.logout}" /> </h3>
 	
 		<h:messages />
-		<h:dataTable value="#{artistaMB.allArtistas}" var="artista" styleClass="table" headerClass="tableColumnsHeader" rowClasses="tableFirstLine,tableNextLine" id="artistas-table" >
+		<h:dataTable value="#{artistaMB.getAllContratacoes()}" var="contratacao" styleClass="table" headerClass="tableColumnsHeader" rowClasses="tableFirstLine,tableNextLine" id="contratacao-table" >
 			<h:column>
 				<f:facet name="header">
 					#{msgs.artistaName}
 				</f:facet>
 				
-				#{artista.nomeArtista}
+				#{contratacao.artista.nomeArtista}
 			</h:column>
 			<h:column>
 				<f:facet name="header">
-					#{msgs.artistaTelefone}
+					#{msgs.estabelecimentoName}
 				</f:facet>
 				
-				#{artista.telefone}
+				#{contratacao.estabelecimento.nomeEstabelecimento}
 			</h:column>
 			<h:column>
 				<h:panelGrid columns="2">
 					<!-- Always save the id as hidden when you use a request scope MB -->
-					<h:inputHidden value="#{artista.idArtista}" />
+					<h:inputHidden value="#{estabelecimento.idEstabelecimento}" />
 					
 					<h:commandButton action="#{artistaMB.updateArtistaStart()}" value="#{msgs.atualizar}" rendered="#{userMB.userAdmin}" >
 						<f:setPropertyActionListener target="#{artistaMB.artista}" value="#{artista}" />

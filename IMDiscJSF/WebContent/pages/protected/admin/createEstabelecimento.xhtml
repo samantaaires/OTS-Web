@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	
+	xmlns:b="http://bootsfaces.net/ui"
+	xmlns:p="http://primefaces.org/ui">
+	
+<h:head>
+	<title>Onde Tem Show</title>
+	<!-- <h:outputStylesheet library="css" name="main.css" /> -->
+</h:head>
+
+<h:body style="background-color:#eee"> 
+	<h:messages/>
+	<h1 style="text-align:center; padding:10pt"><strong>${msgs.estabelecimentoCreateHeader}</strong></h1>
+		<b:row>
+			<b:column span="4"></b:column>
+			<b:column span="8">
+			<h:form enctype="multipart/form-data" styleClass="form-horizontal">
+				<p><b:inputText id="estabelecimentoName" span="6" placeholder="Nome" value="#{estabelecimentoMB.estabelecimento.nomeEstabelecimento}" required="true" requiredMessage="#{msgs.estabelecimentoNameRequired}"/> </p>	
+				<p><b:inputText id="estabelecimentoTelefone" span="6" placeholder="Telefone" value="#{estabelecimentoMB.estabelecimento.telefone}" required="true" requiredMessage="#{msgs.estabelecimentoTelefoneRequired}" /></p>
+				<p> <h:commandButton style="font-size:10pt" class="btn btn-lg btn-info" action="#{estabelecimentoMB.createEstabelecimentoEnd()}" value="#{msgs.criar}" />
+				 #{' '}
+				<h:commandButton style="font-size:10pt" class="btn btn-lg btn-info" action="#{estabelecimentoMB.listAllEstabelecimentos()}" value="#{msgs.cancelar}" immediate="true" /></p>
+				
+			</h:form>
+			</b:column>
+		</b:row>
+		
+	<!-- <h:form>
+		<h:messages/>
+				
+		<h:panelGrid columns="2" styleClass="panelGrid" rowClasses="panelFirstLine,panelNextLine" >
+			<h:outputLabel for="estabelecimentoName" value="#{msgs.estabelecimentoName}" />
+			<h:inputText id="estabelecimentoName" value="#{estabelecimentoMB.estabelecimento.nomeEstabelecimento}" required="true" requiredMessage="#{msgs.estabelecimentoNameRequired}" />
+			
+			<h:outputLabel for="estabelecimentoTelefone" value="#{msgs.estabelecimentoTelefone}" />
+			<h:inputText id="estabelecimentoTelefone" value="#{estabelecimentoMB.estabelecimento.telefone}" required="true" requiredMessage="#{msgs.estabelecimentoTelefoneRequired}" >
+				
+			</h:inputText>
+		</h:panelGrid>
+		<h:panelGrid columns="2">
+			<h:commandButton action="#{estabelecimentoMB.createEstabelecimentoEnd()}" value="#{msgs.create}" />
+			<h:commandButton action="#{estabelecimentoMB.listAllEstabelecimentos()}" value="#{msgs.cancel}" immediate="true" />
+		</h:panelGrid>
+		<br/>
+	</h:form> -->
+	
+</h:body>
+</html>

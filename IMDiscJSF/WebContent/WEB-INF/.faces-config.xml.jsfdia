@@ -89,6 +89,16 @@
     NAME="output" PATH="/pages/protected/admin/deleteArtista.xhtml"
     TARGET="rules:#pages#protected#admin#deleteArtista.xhtml"
     TITLE="deleteArtista" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="findArtista::#pages#protected#admin#findArtista.xhtml"
+    NAME="output1" PATH="/pages/protected/admin/findArtista.xhtml"
+    TARGET="rules:#pages#protected#admin#findArtista.xhtml"
+    TITLE="findArtista" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="listFoundArtista::#pages#protected#admin#listFoundArtistas.xhtml"
+    NAME="output2" PATH="/pages/protected/admin/listFoundArtistas.xhtml"
+    TARGET="rules:#pages#protected#admin#listFoundArtistas.xhtml"
+    TITLE="listFoundArtista" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
  <PROCESS-ITEM NAME="rules:#pages#protected#user#listAllArtistas.xhtml"
@@ -97,4 +107,95 @@
   PATH="/pages/protected/admin/updateArtista.xhtml" SHAPE="240,817,0,0" model-entity="JSFProcessGroup"/>
  <PROCESS-ITEM NAME="rules:#pages#protected#admin#deleteArtista.xhtml"
   PATH="/pages/protected/admin/deleteArtista.xhtml" SHAPE="240,929,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#pages#protected#admin#findArtista.xhtml"
+  PATH="/pages/protected/admin/findArtista.xhtml" SHAPE="256,1073,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM
+  NAME="rules:#pages#protected#admin#listFoundArtistas.xhtml"
+  PATH="/pages/protected/admin/listFoundArtistas.xhtml"
+  SHAPE="272,1217,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules::9" SHAPE="32,1313,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::9" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="listAllEstabelecimento::#pages#protected#user#listAllEstabelecimento.xhtml"
+    NAME="output"
+    PATH="/pages/protected/user/listAllEstabelecimento.xhtml"
+    TARGET="rules:#pages#protected#user#listAllEstabelecimento.xhtml"
+    TITLE="listAllEstabelecimento" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::10" SHAPE="32,1425,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::10" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="createEstabelecimento::#pages#protected#admin#createEstabelecimento.xhtml"
+    NAME="output"
+    PATH="/pages/protected/admin/createEstabelecimento.xhtml"
+    TARGET="rules:#pages#protected#admin#createEstabelecimento.xhtml"
+    TITLE="createEstabelecimento" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::11" SHAPE="32,1537,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::11" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="updateEstabelecimento::#pages#protected#admin#updateEstabelecimento.xhtml"
+    NAME="output"
+    PATH="/pages/protected/admin/updateEstabelecimento.xhtml"
+    TARGET="rules:#pages#protected#admin#updateEstabelecimento.xhtml"
+    TITLE="updateEstabelecimento" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::12" SHAPE="32,1649,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::12" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="deleteEstabelecimento::#pages#protected#admin#deleteEstabelecimento.xhtml"
+    NAME="output"
+    PATH="/pages/protected/admin/deleteEstabelecimento.xhtml"
+    TARGET="rules:#pages#protected#admin#deleteEstabelecimento.xhtml"
+    TITLE="deleteEstabelecimento" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="findEstabelecimento::#pages#protected#admin#findEstabelecimento.xhtml"
+    NAME="output1"
+    PATH="/pages/protected/admin/findEstabelecimento.xhtml"
+    TARGET="rules:#pages#protected#admin#findEstabelecimento.xhtml"
+    TITLE="findEstabelecimento" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="contratarArtista::#pages#protected#admin#contratarArtista.xhtml"
+    NAME="output2" PATH="/pages/protected/admin/contratarArtista.xhtml"
+    TARGET="rules:#pages#protected#admin#contratarArtista.xhtml"
+    TITLE="contratarArtista" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="estabelecimento_listAllArtistas::#pages#protected#user#estabelecimento_listAllArtistas.xhtml"
+    NAME="output3"
+    PATH="/pages/protected/user/estabelecimento_listAllArtistas.xhtml"
+    TARGET="rules:#pages#protected#user#estabelecimento_listAllArtistas.xhtml"
+    TITLE="estabelecimento_listAllArtistas" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM
+  NAME="rules:#pages#protected#admin#updateEstabelecimento.xhtml"
+  PATH="/pages/protected/admin/updateEstabelecimento.xhtml"
+  SHAPE="240,1553,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM
+  NAME="rules:#pages#protected#admin#findEstabelecimento.xhtml"
+  PATH="/pages/protected/admin/findEstabelecimento.xhtml"
+  SHAPE="272,1841,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM
+  NAME="rules:#pages#protected#admin#createEstabelecimento.xhtml"
+  PATH="/pages/protected/admin/createEstabelecimento.xhtml"
+  SHAPE="240,1441,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM
+  NAME="rules:#pages#protected#user#listAllEstabelecimento.xhtml"
+  PATH="/pages/protected/user/listAllEstabelecimento.xhtml"
+  SHAPE="240,1329,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM
+  NAME="rules:#pages#protected#admin#deleteEstabelecimento.xhtml"
+  PATH="/pages/protected/admin/deleteEstabelecimento.xhtml"
+  SHAPE="272,1665,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM
+  NAME="rules:#pages#protected#admin#contratarArtista.xhtml"
+  PATH="/pages/protected/admin/contratarArtista.xhtml"
+  SHAPE="272,1841,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM
+  NAME="rules:#pages#protected#user#estabelecimento_listAllArtistas.xhtml"
+  PATH="/pages/protected/user/estabelecimento_listAllArtistas.xhtml"
+  SHAPE="288,1873,0,0" model-entity="JSFProcessGroup"/>
 </PROCESS>

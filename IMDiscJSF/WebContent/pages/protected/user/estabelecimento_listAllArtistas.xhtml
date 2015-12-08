@@ -36,11 +36,8 @@
 					<!-- Always save the id as hidden when you use a request scope MB -->
 					<h:inputHidden value="#{artista.idArtista}" />
 					
-					<h:commandButton action="#{artistaMB.updateArtistaStart()}" value="#{msgs.atualizar}" rendered="#{userMB.userAdmin}" >
-						<f:setPropertyActionListener target="#{artistaMB.artista}" value="#{artista}" />
-					</h:commandButton>
-					<h:commandButton action="#{artistaMB.deleteArtistaStart()}" value="#{msgs.deletar}" rendered="#{userMB.userAdmin}" >
-						<f:setPropertyActionListener target="#{artistaMB.artista}" value="#{artista}" />
+					<h:commandButton action="#{estabelecimentoMB.contratarArtistaStart()}" value="#{msgs.contratarArtista}" rendered="#{userMB.userAdmin}" >
+						<f:setPropertyActionListener target="#{estabelecimentoMB.artista}" value="#{artista}" />
 					</h:commandButton>
 				</h:panelGrid>
 			</h:column>

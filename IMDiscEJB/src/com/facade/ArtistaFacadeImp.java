@@ -35,6 +35,11 @@ public class ArtistaFacadeImp implements ArtistaFacade{
 	public Artista find(int entityID) {
 		return artistaDAO.find(entityID);
 	}
+	
+/*	@Override
+	public Artista findByName(String entityName) {
+		return artistaDAO.findByName(entityName);
+	}*/
 
 	@Override
 	public List<Artista> findAll() {
