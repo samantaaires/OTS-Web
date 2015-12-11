@@ -13,6 +13,57 @@
 			<redirect/>
 		</navigation-case>
 	</navigation-rule>
+		<navigation-rule>
+		<navigation-case>
+			<from-outcome>updateArtistaProfile</from-outcome>
+			<to-view-id>/pages/protected/user/updateArtistaProfile.xhtml</to-view-id>
+			<redirect/>
+		</navigation-case>
+	</navigation-rule>
+	
+			<navigation-rule>
+		<navigation-case>
+			<from-outcome>artistaListAllEstabelecimentos</from-outcome>
+			<to-view-id>/pages/protected/user/Artista/artista_listAllEstabelecimentos.xhtml</to-view-id>
+			<redirect/>
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+			<navigation-case>
+			<from-outcome>estabelecimentoListAllArtistas</from-outcome>
+			<to-view-id>/pages/protected/user/Estabelecimento/estabelecimento_listAllArtistas.xhtml</to-view-id>
+			<redirect/>
+		</navigation-case>
+	</navigation-rule>
+	
+
+		<navigation-rule>
+		<navigation-case>
+			<from-outcome>cancelar</from-outcome>
+			<to-view-id>/pages/protected/user/listAllDogs.xhtml</to-view-id>
+			<redirect/>
+		</navigation-case>
+	</navigation-rule>
+	
+		<navigation-rule>
+		<navigation-case>
+			<from-outcome>souArtista</from-outcome>
+			<to-view-id>/pages/protected/user/Artista/artista_profile.xhtml</to-view-id>
+			<redirect/>
+		</navigation-case>
+	</navigation-rule>
+	
+			<navigation-rule>
+		<navigation-case>
+			<from-outcome>souEstabelecimento</from-outcome>
+			<to-view-id>/pages/protected/user/Estabelecimento/estabelecimento_profile.xhtml</to-view-id>
+			<redirect/>
+		</navigation-case>
+	</navigation-rule>
+	
+	
+	
 	<navigation-rule>
 		<navigation-case>
 			<from-outcome>listAllDogs</from-outcome>
@@ -39,13 +90,10 @@
 		</navigation-case>
 	</navigation-rule>
 	
-	
-	
-	
 	<navigation-rule>
 		<navigation-case>
 			<from-outcome>listAllArtistas</from-outcome>
-			<to-view-id>/pages/protected/user/listAllArtistas.xhtml</to-view-id>
+			<to-view-id>/pages/protected/admin/listAllArtistas.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
@@ -76,10 +124,11 @@
 	</navigation-case> 	
 	</navigation-rule>
 	
+	
 		<navigation-rule>
 		<navigation-case>
-			<from-outcome>listAllEstabelecimento</from-outcome>
-			<to-view-id>/pages/protected/user/listAllEstabelecimento.xhtml</to-view-id>
+			<from-outcome>listAllEstabelecimentos</from-outcome>
+			<to-view-id>/pages/protected/admin/listAllEstabelecimentos.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
@@ -108,13 +157,22 @@
 		<from-outcome>contratarArtista</from-outcome>
 		<to-view-id>/pages/protected/admin/contratarArtista.xhtml</to-view-id>
 	</navigation-case> 	
-	<navigation-case>
-		<from-outcome>estabelecimento_listAllArtistas</from-outcome>
-		<to-view-id>/pages/protected/user/estabelecimento_listAllArtistas.xhtml</to-view-id>
-	</navigation-case> 
-	
 	</navigation-rule>
 	
+	
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>profileArtista</from-outcome>
+			<to-view-id>/pages/protected/user/Artista/artista_profile.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+		<navigation-rule>
+		<navigation-case>
+			<from-outcome>souAdmin</from-outcome>
+			<to-view-id>/pages/protected/admin/admin_profile.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
 	
 	
 	

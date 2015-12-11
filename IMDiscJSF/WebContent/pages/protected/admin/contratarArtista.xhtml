@@ -11,22 +11,12 @@
 	<h:form>
 		<h:messages/>
 		
-		<h3>#{msgs.estabelecimento}: #{estabelecimentoMB.estabelecimento.nomeEstabelecimento} || <h:commandLink action="#{userMB.logOut()}" value="#{msgs.logout}" /> </h3>
-		<h3>#{msgs.artista}: #{estabelecimentoMB.artista.nomeArtista}</h3>
+		<h3>#{msgs.estabelecimento}: #{estabelecimentoMB.estabelecimento.name} || <h:commandLink action="#{userMB.logOut()}" value="#{msgs.logout}" /> </h3>
+		<h3>#{msgs.artista}: #{estabelecimentoMB.artista.name}</h3>
 		
-		<h:inputHidden value="#{estabelecimentoMB.artista.idArtista}" />
-		<h:inputHidden value="#{estabelecimentoMB.estabelecimento.idEstabelecimento}" />
+		<h:inputHidden value="#{estabelecimentoMB.artista.id}" />
+		<h:inputHidden value="#{estabelecimentoMB.estabelecimento.id}" />
 		
-		<!-- <h:panelGrid columns="2" styleClass="panelGrid" rowClasses="panelFirstLine,panelNextLine" >
-			<h:outputLabel for="artistaName" value="#{msgs.artistaName}" />
-			<h:inputText id="artistaName" value="#{artistaMB.artista.nomeArtista}" required="true" requiredMessage="#{msgs.artistaNameRequired}" />
-			
-			<h:outputLabel for="artistaTelefone" value="#{msgs.artistaTelefone}" />
-			<h:inputText id="artistaTelefone" value="#{artistaMB.artista.telefone}" required="true" requiredMessage="#{msgs.artistaTelefoneRequired}" >
-				<f:convertNumber />
-			</h:inputText>
-		</h:panelGrid>
-		 -->
 		 <h:panelGrid columns="2">
 			<h:commandButton action="#{estabelecimentoMB.contratarArtistaEnd()}" value="#{msgs.contratarArtista}" />
 		</h:panelGrid>

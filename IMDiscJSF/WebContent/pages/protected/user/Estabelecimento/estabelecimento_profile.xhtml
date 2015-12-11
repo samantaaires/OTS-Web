@@ -12,26 +12,10 @@
 		<h3>#{msgs.loginHello}: #{userMB.user.name} || <h:commandLink action="#{userMB.logOut()}" value="#{msgs.logout}" /> </h3>
 	
 		<h:messages />
-		<h:dataTable value="#{artistaMB.allArtistas}" var="artista" styleClass="table" headerClass="tableColumnsHeader" rowClasses="tableFirstLine,tableNextLine" >
-			<h:column>
-				<f:facet name="header">
-					#{msgs.artistaName}
-				</f:facet>
-				
-				 #{artista.name}
-			</h:column>
-			<h:column>
-				<f:facet name="header">
-					#{msgs.artistaTelefone}
-				</f:facet>
-				
-				#{artista.telefone}
-			</h:column>
-
-		</h:dataTable>
 		<!-- This button is displayed to the user, just to you see the error msg  -->
-		<h:commandButton action="createArtista" value="#{msgs.criar} #{msgs.artista}" />
-		<!-- <h:commandButton action="createDisciplina" value="Criar Disciplina" /> -->
+		<h:commandButton value="Editar Perfil" />
+		<p><h:commandButton action="estabelecimentoListAllArtistas" value="Listar Artistas" /></p>					
+				
 	</h:form>
 </h:body>
 </html>

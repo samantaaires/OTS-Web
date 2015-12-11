@@ -11,13 +11,13 @@ import com.model.User;
 public class UserDAO extends GenericDAO<User> {
 
     public UserDAO() {
-	super(User.class);
+    	super(User.class);
     }
 
     public User findUserByEmail(String email) {
-	Map<String, Object> parameters = new HashMap<String, Object>();
-	parameters.put("email", email);
+    	Map<String, Object> parameters = new HashMap<String, Object>();
+    	parameters.put("email", email);
 
-	return super.findOneResult(User.FIND_BY_EMAIL, parameters);
+    	return super.findOneResult(User.FIND_BY_EMAIL, parameters);
     }
 }

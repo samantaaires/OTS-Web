@@ -29,9 +29,6 @@ public class Pessoa implements Serializable {
 	
 	//private String login; --substituido login e senha por user
 	//private String senha;
-	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	@JoinColumn(name = "id_user")
-	private User user;
 	
 /*	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	@JoinColumn(name = "id_escolha")	
@@ -82,14 +79,7 @@ public class Pessoa implements Serializable {
 	}*/
 
 	
-	public User getUser() {
-		return user;
-	}
 
-	
-	public void setUser(User user) {
-		this.user = user;
-	}
 	
 }
 

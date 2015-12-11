@@ -14,10 +14,11 @@
  <PROCESS-ITEM NAME="rules::1" SHAPE="32,129,0,0" model-entity="JSFProcessGroup">
   <PROCESS-ITEM ID="rules::1" NAME="item" model-entity="JSFProcessItem">
    <PROCESS-ITEM-OUTPUT
-    ID="listAllDogs::#pages#protected#user#listAllDogs.xhtml"
-    NAME="output" PATH="/pages/protected/user/listAllDogs.xhtml"
-    TARGET="rules:#pages#protected#user#listAllDogs.xhtml"
-    TITLE="listAllDogs" model-entity="JSFProcessItemOutput"/>
+    ID="updateArtistaProfile::#pages#protected#user#updateArtistaProfile.xhtml"
+    NAME="output"
+    PATH="/pages/protected/user/updateArtistaProfile.xhtml"
+    TARGET="rules:#pages#protected#user#updateArtistaProfile.xhtml"
+    TITLE="updateArtistaProfile" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
  <PROCESS-ITEM NAME="rules:#pages#protected#admin#createDog.xhtml"
@@ -25,19 +26,21 @@
  <PROCESS-ITEM NAME="rules::2" SHAPE="32,241,0,0" model-entity="JSFProcessGroup">
   <PROCESS-ITEM ID="rules::2" NAME="item" model-entity="JSFProcessItem">
    <PROCESS-ITEM-OUTPUT
-    ID="createDog::#pages#protected#admin#createDog.xhtml" NAME="output"
-    PATH="/pages/protected/admin/createDog.xhtml"
-    TARGET="rules:#pages#protected#admin#createDog.xhtml"
-    TITLE="createDog" model-entity="JSFProcessItemOutput"/>
+    ID="artistaListAllEstabelecimentos::#pages#protected#user#Artista#artista_listAllEstabelecimentos.xhtml"
+    NAME="output"
+    PATH="/pages/protected/user/Artista/artista_listAllEstabelecimentos.xhtml"
+    TARGET="rules:#pages#protected#user#Artista#artista_listAllEstabelecimentos.xhtml"
+    TITLE="artistaListAllEstabelecimentos" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
  <PROCESS-ITEM NAME="rules::3" SHAPE="32,353,0,0" model-entity="JSFProcessGroup">
   <PROCESS-ITEM ID="rules::3" NAME="item" model-entity="JSFProcessItem">
    <PROCESS-ITEM-OUTPUT
-    ID="updateDog::#pages#protected#admin#updateDog.xhtml" NAME="output"
-    PATH="/pages/protected/admin/updateDog.xhtml"
-    TARGET="rules:#pages#protected#admin#updateDog.xhtml"
-    TITLE="updateDog" model-entity="JSFProcessItemOutput"/>
+    ID="estabelecimentoListAllArtistas::#pages#protected#user#Estabelecimento#estabelecimento_listAllArtistas.xhtml"
+    NAME="output"
+    PATH="/pages/protected/user/Estabelecimento/estabelecimento_listAllArtistas.xhtml"
+    TARGET="rules:#pages#protected#user#Estabelecimento#estabelecimento_listAllArtistas.xhtml"
+    TITLE="estabelecimentoListAllArtistas" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
  <PROCESS-ITEM NAME="rules:#pages#protected#admin#updateDog.xhtml"
@@ -47,23 +50,91 @@
  <PROCESS-ITEM NAME="rules::4" SHAPE="32,465,0,0" model-entity="JSFProcessGroup">
   <PROCESS-ITEM ID="rules::4" NAME="item" model-entity="JSFProcessItem">
    <PROCESS-ITEM-OUTPUT
+    ID="cancelar::#pages#protected#user#listAllDogs.xhtml" NAME="output"
+    PATH="/pages/protected/user/listAllDogs.xhtml"
+    TARGET="rules:#pages#protected#user#listAllDogs.xhtml"
+    TITLE="cancelar" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::5" SHAPE="32,577,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::5" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="souArtista::#pages#protected#user#Artista#artista_profile.xhtml"
+    NAME="output"
+    PATH="/pages/protected/user/Artista/artista_profile.xhtml"
+    TARGET="rules:#pages#protected#user#Artista#artista_profile.xhtml"
+    TITLE="souArtista" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::6" SHAPE="32,689,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::6" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="souEstabelecimento::#pages#protected#user#Estabelecimento#estabelecimento_profile.xhtml"
+    NAME="output"
+    PATH="/pages/protected/user/Estabelecimento/estabelecimento_profile.xhtml"
+    TARGET="rules:#pages#protected#user#Estabelecimento#estabelecimento_profile.xhtml"
+    TITLE="souEstabelecimento" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::7" SHAPE="32,801,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::7" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="listAllDogs::#pages#protected#user#listAllDogs.xhtml"
+    NAME="output" PATH="/pages/protected/user/listAllDogs.xhtml"
+    TARGET="rules:#pages#protected#user#listAllDogs.xhtml"
+    TITLE="listAllDogs" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#pages#protected#admin#createArtista.xhtml"
+  PATH="/pages/protected/admin/createArtista.xhtml" SHAPE="240,593,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules::8" SHAPE="32,913,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::8" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="createDog::#pages#protected#admin#createDog.xhtml" NAME="output"
+    PATH="/pages/protected/admin/createDog.xhtml"
+    TARGET="rules:#pages#protected#admin#createDog.xhtml"
+    TITLE="createDog" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#pages#protected#admin#updateArtista.xhtml"
+  PATH="/pages/protected/admin/updateArtista.xhtml" SHAPE="240,817,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#pages#protected#admin#deleteArtista.xhtml"
+  PATH="/pages/protected/admin/deleteArtista.xhtml" SHAPE="240,929,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#pages#protected#admin#findArtista.xhtml"
+  PATH="/pages/protected/admin/findArtista.xhtml" SHAPE="256,1073,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM
+  NAME="rules:#pages#protected#admin#listFoundArtistas.xhtml"
+  PATH="/pages/protected/admin/listFoundArtistas.xhtml"
+  SHAPE="272,1217,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules::9" SHAPE="32,1313,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::9" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="updateDog::#pages#protected#admin#updateDog.xhtml" NAME="output"
+    PATH="/pages/protected/admin/updateDog.xhtml"
+    TARGET="rules:#pages#protected#admin#updateDog.xhtml"
+    TITLE="updateDog" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::10" SHAPE="32,1425,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::10" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
     ID="deleteDog::#pages#protected#admin#deleteDog.xhtml" NAME="output"
     PATH="/pages/protected/admin/deleteDog.xhtml"
     TARGET="rules:#pages#protected#admin#deleteDog.xhtml"
     TITLE="deleteDog" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
- <PROCESS-ITEM NAME="rules::5" SHAPE="32,577,0,0" model-entity="JSFProcessGroup">
-  <PROCESS-ITEM ID="rules::5" NAME="item" model-entity="JSFProcessItem">
+ <PROCESS-ITEM NAME="rules::11" SHAPE="32,1537,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::11" NAME="item" model-entity="JSFProcessItem">
    <PROCESS-ITEM-OUTPUT
-    ID="listAllArtistas::#pages#protected#user#listAllArtistas.xhtml"
-    NAME="output" PATH="/pages/protected/user/listAllArtistas.xhtml"
-    TARGET="rules:#pages#protected#user#listAllArtistas.xhtml"
+    ID="listAllArtistas::#pages#protected#admin#listAllArtistas.xhtml"
+    NAME="output" PATH="/pages/protected/admin/listAllArtistas.xhtml"
+    TARGET="rules:#pages#protected#admin#listAllArtistas.xhtml"
     TITLE="listAllArtistas" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
- <PROCESS-ITEM NAME="rules::6" SHAPE="32,689,0,0" model-entity="JSFProcessGroup">
-  <PROCESS-ITEM ID="rules::6" NAME="item" model-entity="JSFProcessItem">
+ <PROCESS-ITEM NAME="rules::12" SHAPE="32,1649,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::12" NAME="item" model-entity="JSFProcessItem">
    <PROCESS-ITEM-OUTPUT
     ID="createArtista::#pages#protected#admin#createArtista.xhtml"
     NAME="output" PATH="/pages/protected/admin/createArtista.xhtml"
@@ -71,8 +142,28 @@
     TITLE="createArtista" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
- <PROCESS-ITEM NAME="rules::7" SHAPE="32,801,0,0" model-entity="JSFProcessGroup">
-  <PROCESS-ITEM ID="rules::7" NAME="item" model-entity="JSFProcessItem">
+ <PROCESS-ITEM
+  NAME="rules:#pages#protected#admin#updateEstabelecimento.xhtml"
+  PATH="/pages/protected/admin/updateEstabelecimento.xhtml"
+  SHAPE="240,1553,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM
+  NAME="rules:#pages#protected#admin#findEstabelecimento.xhtml"
+  PATH="/pages/protected/admin/findEstabelecimento.xhtml"
+  SHAPE="272,1841,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM
+  NAME="rules:#pages#protected#admin#createEstabelecimento.xhtml"
+  PATH="/pages/protected/admin/createEstabelecimento.xhtml"
+  SHAPE="240,1441,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM
+  NAME="rules:#pages#protected#admin#deleteEstabelecimento.xhtml"
+  PATH="/pages/protected/admin/deleteEstabelecimento.xhtml"
+  SHAPE="272,1665,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM
+  NAME="rules:#pages#protected#admin#contratarArtista.xhtml"
+  PATH="/pages/protected/admin/contratarArtista.xhtml"
+  SHAPE="272,1841,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules::13" SHAPE="32,2081,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::13" NAME="item" model-entity="JSFProcessItem">
    <PROCESS-ITEM-OUTPUT
     ID="updateArtista::#pages#protected#admin#updateArtista.xhtml"
     NAME="output" PATH="/pages/protected/admin/updateArtista.xhtml"
@@ -80,10 +171,12 @@
     TITLE="updateArtista" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
- <PROCESS-ITEM NAME="rules:#pages#protected#admin#createArtista.xhtml"
-  PATH="/pages/protected/admin/createArtista.xhtml" SHAPE="240,593,0,0" model-entity="JSFProcessGroup"/>
- <PROCESS-ITEM NAME="rules::8" SHAPE="32,913,0,0" model-entity="JSFProcessGroup">
-  <PROCESS-ITEM ID="rules::8" NAME="item" model-entity="JSFProcessItem">
+ <PROCESS-ITEM
+  NAME="rules:#pages#protected#user#Artista#artista_profile.xhtml"
+  PATH="/pages/protected/user/Artista/artista_profile.xhtml"
+  SHAPE="240,2097,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules::14" SHAPE="32,2305,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::14" NAME="item" model-entity="JSFProcessItem">
    <PROCESS-ITEM-OUTPUT
     ID="deleteArtista::#pages#protected#admin#deleteArtista.xhtml"
     NAME="output" PATH="/pages/protected/admin/deleteArtista.xhtml"
@@ -101,30 +194,18 @@
     TITLE="listFoundArtista" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
- <PROCESS-ITEM NAME="rules:#pages#protected#user#listAllArtistas.xhtml"
-  PATH="/pages/protected/user/listAllArtistas.xhtml" SHAPE="240,705,0,0" model-entity="JSFProcessGroup"/>
- <PROCESS-ITEM NAME="rules:#pages#protected#admin#updateArtista.xhtml"
-  PATH="/pages/protected/admin/updateArtista.xhtml" SHAPE="240,817,0,0" model-entity="JSFProcessGroup"/>
- <PROCESS-ITEM NAME="rules:#pages#protected#admin#deleteArtista.xhtml"
-  PATH="/pages/protected/admin/deleteArtista.xhtml" SHAPE="240,929,0,0" model-entity="JSFProcessGroup"/>
- <PROCESS-ITEM NAME="rules:#pages#protected#admin#findArtista.xhtml"
-  PATH="/pages/protected/admin/findArtista.xhtml" SHAPE="256,1073,0,0" model-entity="JSFProcessGroup"/>
- <PROCESS-ITEM
-  NAME="rules:#pages#protected#admin#listFoundArtistas.xhtml"
-  PATH="/pages/protected/admin/listFoundArtistas.xhtml"
-  SHAPE="272,1217,0,0" model-entity="JSFProcessGroup"/>
- <PROCESS-ITEM NAME="rules::9" SHAPE="32,1313,0,0" model-entity="JSFProcessGroup">
-  <PROCESS-ITEM ID="rules::9" NAME="item" model-entity="JSFProcessItem">
+ <PROCESS-ITEM NAME="rules::15" SHAPE="32,2529,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::15" NAME="item" model-entity="JSFProcessItem">
    <PROCESS-ITEM-OUTPUT
-    ID="listAllEstabelecimento::#pages#protected#user#listAllEstabelecimento.xhtml"
+    ID="listAllEstabelecimentos::#pages#protected#admin#listAllEstabelecimentos.xhtml"
     NAME="output"
-    PATH="/pages/protected/user/listAllEstabelecimento.xhtml"
-    TARGET="rules:#pages#protected#user#listAllEstabelecimento.xhtml"
-    TITLE="listAllEstabelecimento" model-entity="JSFProcessItemOutput"/>
+    PATH="/pages/protected/admin/listAllEstabelecimentos.xhtml"
+    TARGET="rules:#pages#protected#admin#listAllEstabelecimentos.xhtml"
+    TITLE="listAllEstabelecimentos" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
- <PROCESS-ITEM NAME="rules::10" SHAPE="32,1425,0,0" model-entity="JSFProcessGroup">
-  <PROCESS-ITEM ID="rules::10" NAME="item" model-entity="JSFProcessItem">
+ <PROCESS-ITEM NAME="rules::16" SHAPE="32,2753,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::16" NAME="item" model-entity="JSFProcessItem">
    <PROCESS-ITEM-OUTPUT
     ID="createEstabelecimento::#pages#protected#admin#createEstabelecimento.xhtml"
     NAME="output"
@@ -133,8 +214,8 @@
     TITLE="createEstabelecimento" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
- <PROCESS-ITEM NAME="rules::11" SHAPE="32,1537,0,0" model-entity="JSFProcessGroup">
-  <PROCESS-ITEM ID="rules::11" NAME="item" model-entity="JSFProcessItem">
+ <PROCESS-ITEM NAME="rules::17" SHAPE="32,2977,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::17" NAME="item" model-entity="JSFProcessItem">
    <PROCESS-ITEM-OUTPUT
     ID="updateEstabelecimento::#pages#protected#admin#updateEstabelecimento.xhtml"
     NAME="output"
@@ -143,8 +224,12 @@
     TITLE="updateEstabelecimento" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
- <PROCESS-ITEM NAME="rules::12" SHAPE="32,1649,0,0" model-entity="JSFProcessGroup">
-  <PROCESS-ITEM ID="rules::12" NAME="item" model-entity="JSFProcessItem">
+ <PROCESS-ITEM
+  NAME="rules:#pages#protected#user#updateArtistaProfile.xhtml"
+  PATH="/pages/protected/user/updateArtistaProfile.xhtml"
+  SHAPE="240,2001,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules::18" SHAPE="32,3201,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::18" NAME="item" model-entity="JSFProcessItem">
    <PROCESS-ITEM-OUTPUT
     ID="deleteEstabelecimento::#pages#protected#admin#deleteEstabelecimento.xhtml"
     NAME="output"
@@ -162,40 +247,46 @@
     NAME="output2" PATH="/pages/protected/admin/contratarArtista.xhtml"
     TARGET="rules:#pages#protected#admin#contratarArtista.xhtml"
     TITLE="contratarArtista" model-entity="JSFProcessItemOutput"/>
-   <PROCESS-ITEM-OUTPUT
-    ID="estabelecimento_listAllArtistas::#pages#protected#user#estabelecimento_listAllArtistas.xhtml"
-    NAME="output3"
-    PATH="/pages/protected/user/estabelecimento_listAllArtistas.xhtml"
-    TARGET="rules:#pages#protected#user#estabelecimento_listAllArtistas.xhtml"
-    TITLE="estabelecimento_listAllArtistas" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
  <PROCESS-ITEM
-  NAME="rules:#pages#protected#admin#updateEstabelecimento.xhtml"
-  PATH="/pages/protected/admin/updateEstabelecimento.xhtml"
-  SHAPE="240,1553,0,0" model-entity="JSFProcessGroup"/>
+  NAME="rules:#pages#protected#user#Artista#artista_listAllEstabelecimentos.xhtml"
+  PATH="/pages/protected/user/Artista/artista_listAllEstabelecimentos.xhtml"
+  SHAPE="240,2225,0,0" model-entity="JSFProcessGroup"/>
  <PROCESS-ITEM
-  NAME="rules:#pages#protected#admin#findEstabelecimento.xhtml"
-  PATH="/pages/protected/admin/findEstabelecimento.xhtml"
-  SHAPE="272,1841,0,0" model-entity="JSFProcessGroup"/>
+  NAME="rules:#pages#protected#user#Estabelecimento#estabelecimento_listAllArtistas.xhtml"
+  PATH="/pages/protected/user/Estabelecimento/estabelecimento_listAllArtistas.xhtml"
+  SHAPE="288,2785,0,0" model-entity="JSFProcessGroup"/>
  <PROCESS-ITEM
-  NAME="rules:#pages#protected#admin#createEstabelecimento.xhtml"
-  PATH="/pages/protected/admin/createEstabelecimento.xhtml"
-  SHAPE="240,1441,0,0" model-entity="JSFProcessGroup"/>
+  NAME="rules:#pages#protected#admin#listAllEstabelecimentos.xhtml"
+  PATH="/pages/protected/admin/listAllEstabelecimentos.xhtml"
+  SHAPE="240,2561,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#pages#protected#admin#admin_profile.xhtml"
+  PATH="/pages/protected/admin/admin_profile.xhtml" SHAPE="240,3329,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules::19" SHAPE="32,3425,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::19" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="profileArtista::#pages#protected#user#Artista#artista_profile.xhtml"
+    NAME="output"
+    PATH="/pages/protected/user/Artista/artista_profile.xhtml"
+    TARGET="rules:#pages#protected#user#Artista#artista_profile.xhtml"
+    TITLE="profileArtista" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
  <PROCESS-ITEM
-  NAME="rules:#pages#protected#user#listAllEstabelecimento.xhtml"
-  PATH="/pages/protected/user/listAllEstabelecimento.xhtml"
-  SHAPE="240,1329,0,0" model-entity="JSFProcessGroup"/>
- <PROCESS-ITEM
-  NAME="rules:#pages#protected#admin#deleteEstabelecimento.xhtml"
-  PATH="/pages/protected/admin/deleteEstabelecimento.xhtml"
-  SHAPE="272,1665,0,0" model-entity="JSFProcessGroup"/>
- <PROCESS-ITEM
-  NAME="rules:#pages#protected#admin#contratarArtista.xhtml"
-  PATH="/pages/protected/admin/contratarArtista.xhtml"
-  SHAPE="272,1841,0,0" model-entity="JSFProcessGroup"/>
- <PROCESS-ITEM
-  NAME="rules:#pages#protected#user#estabelecimento_listAllArtistas.xhtml"
-  PATH="/pages/protected/user/estabelecimento_listAllArtistas.xhtml"
-  SHAPE="288,1873,0,0" model-entity="JSFProcessGroup"/>
+  NAME="rules:#pages#protected#user#Estabelecimento#estabelecimento_profile.xhtml"
+  PATH="/pages/protected/user/Estabelecimento/estabelecimento_profile.xhtml"
+  SHAPE="240,593,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules::20" SHAPE="32,3425,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::20" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="souAdmin::#pages#protected#admin#admin_profile.xhtml"
+    NAME="output" PATH="/pages/protected/admin/admin_profile.xhtml"
+    TARGET="rules:#pages#protected#admin#admin_profile.xhtml"
+    TITLE="souAdmin" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#pages#protected#admin#listAllArtistas.xhtml"
+  PATH="/pages/protected/admin/listAllArtistas.xhtml"
+  SHAPE="240,2449,0,0" model-entity="JSFProcessGroup"/>
 </PROCESS>

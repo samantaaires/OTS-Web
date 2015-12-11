@@ -32,6 +32,12 @@ public class UserMB {
 	public boolean isUserAdmin(){
 		return getRequest().isUserInRole("ADMIN");
 	}
+	public boolean isUserArt(){
+		return getRequest().isUserInRole("ART");
+	}
+	public boolean isUserEstab(){
+		return getRequest().isUserInRole("ESTAB");
+	}
 	
 	public String logOut(){
 		getRequest().getSession().invalidate();

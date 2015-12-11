@@ -68,15 +68,12 @@ public class Artista implements Serializable {
 	/* public Escolha getEscolha() {
 		return escolha;
 	}
-
 	public void setEscolha(Escolha escolha) {
 		this.escolha = escolha;
 	}
-
 	public EstruturaCurricular getEstruturaCurricular() {
 		return estruturaCurricular;
 	}
-
 	public void setEstruturaCurricular(EstruturaCurricular estruturaCurricular) {
 		this.estruturaCurricular = estruturaCurricular;
 	} */
@@ -92,4 +89,3 @@ public class Artista implements Serializable {
 //	}
 //	
 }
-

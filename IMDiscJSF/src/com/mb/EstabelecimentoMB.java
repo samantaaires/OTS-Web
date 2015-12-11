@@ -41,9 +41,20 @@ public class EstabelecimentoMB implements Serializable {
 	private static final String FIND_ESTABELECIMENTO = "findEstabelecimento";
 	private static final String LIST_FOUND_ESTABELECIMENTOS = "listFoundEstabelecimentos";
 	private static final String CONTRATAR_ARTISTA  = "contratarArtista";
-	private static final String ESTABELECIMENTO_LIST_ALL_ARTISTAS = "estabelecimento_listAllArtistas";
+	private static final String CANCELAR = "cancelar";
+	private static final String SOU_ESTABELECIMENTO = "souEstabelecimento";
+	private static final String ARTISTA_LIST_ALL_ESTABELECIMENTOS = "artistaListAllEstabelecimentos";
+	
 	private static final String STAY_IN_THE_SAME_PAGE = null;
 
+	public String souEstabelecimento(){
+		return SOU_ESTABELECIMENTO;
+	}
+	
+	public String Cancelar(){
+		return CANCELAR;
+	}
+	
 	public Estabelecimento getEstabelecimento() {
 		
 		if(estabelecimento == null){
@@ -55,6 +66,20 @@ public class EstabelecimentoMB implements Serializable {
 	
 	public void setEstabelecimento(Estabelecimento estabelecimento) {
 		this.estabelecimento = estabelecimento;
+	}
+	
+	public String artistaListAllEstabelecimentos(){
+		try {
+			estabelecimentoFacade.save(estabelecimento);
+		} catch (EJBException e) {
+			sendErrorMessageToUser("Error. Check if the telefone is above 0 or call the adm");
+			
+			return STAY_IN_THE_SAME_PAGE;
+		}		
+		
+		sendInfoMessageToUser("Operation Complete: Create");
+		
+		return ARTISTA_LIST_ALL_ESTABELECIMENTOS;
 	}
 	
 public Artista getArtista() {
@@ -178,20 +203,6 @@ public Artista getArtista() {
 		return CONTRATAR_ARTISTA;
 	}
 	
-	public String contratarArtistaEnd() {
-		System.out.println(contratacao.getEstabelecimento());
-		try {
-			contratacaoFacade.save(contratacao);
-		} catch (EJBException e) {
-			sendErrorMessageToUser("Error. Check if the telefone is above 0 or call the adm");
-			
-			return STAY_IN_THE_SAME_PAGE;
-		}		
-		
-		sendInfoMessageToUser("Operation Complete: Create");
-		
-		return ESTABELECIMENTO_LIST_ALL_ARTISTAS;
-	}
 	
 	private void sendInfoMessageToUser(String message){
 		FacesContext context = getContext();

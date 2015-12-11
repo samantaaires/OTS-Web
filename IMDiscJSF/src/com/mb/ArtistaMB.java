@@ -33,9 +33,55 @@ public class ArtistaMB implements Serializable {
 	private static final String UPDATE_ARTISTA = "updateArtista";
 	private static final String LIST_ALL_ARTISTAS = "listAllArtistas";
 	private static final String FIND_ARTISTA = "findArtista";
-	private static final String LIST_FOUND_ARTISTAS = "listFoundArtistas";
+	private static final String UPDATE_ARTISTA_PROFILE = "updateArtistaProfile";
+	private static final String CANCELAR = "cancelar";
+	private static final String SOU_ARTISTA = "souArtista";
+	private static final String SOU_ADMIN = "souAdmin";
+	private static final String ESTABELECIMENTO_LIST_ALL_ARTISTAS = "estabelecimentoListAllArtistas";
 	private static final String STAY_IN_THE_SAME_PAGE = null;
 
+	public String estabelecimentoListAllArtistas(){
+		try {
+			artistaFacade.save(artista);
+		} catch (EJBException e) {
+			sendErrorMessageToUser("Error. Check if the telefone is above 0 or call the adm");
+			
+			return STAY_IN_THE_SAME_PAGE;
+		}		
+		
+		sendInfoMessageToUser("Operation Complete: Create");
+		
+		return ESTABELECIMENTO_LIST_ALL_ARTISTAS;
+	}
+	
+	public String Cancelar(){
+		return CANCELAR;
+	}
+	
+	public String updateArtistaProfileStart(){
+		return UPDATE_ARTISTA_PROFILE;
+	}
+	
+	public String updateArtistaProfileEnd(){
+		try {
+			artistaFacade.update(artista);
+		} catch (EJBException e) {
+			sendErrorMessageToUser("Error. Check if the Telefone is above 0 or call the adm");
+			return STAY_IN_THE_SAME_PAGE;
+		}
+		
+		sendInfoMessageToUser("Operation Complete: Update");
+		return SOU_ARTISTA;
+	}
+	
+	public String souArtista(){
+		return SOU_ARTISTA;
+	}
+
+	public String souAdmin(){
+		return SOU_ADMIN;
+	}
+	
 	public Artista getArtista() {
 		
 		if(artista == null){
@@ -130,20 +176,8 @@ public class ArtistaMB implements Serializable {
 	public String findArtistaStart() {
 		return FIND_ARTISTA;
 	}
+
 	
-	public String findArtistaEnd(){
-		try {
-			artistaFacade.find(artista.getIdArtista());
-		} catch (EJBException e) {
-			sendErrorMessageToUser("Error. Check if the telefone is above 0 or call the adm");
-			
-			return STAY_IN_THE_SAME_PAGE;
-		}		
-		
-		sendInfoMessageToUser("Operation Complete: Create");
-		
-		return LIST_FOUND_ARTISTAS;
-	}
 	private void sendInfoMessageToUser(String message){
 		FacesContext context = getContext();
 		context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, message, message));
